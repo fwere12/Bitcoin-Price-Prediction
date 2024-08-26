@@ -1,0 +1,3 @@
+#Convert 'Date' columns to datetime
+df_train['Date'] = pd.to_datetime(df_train['Date'])
+df_test['Date'] = pd.to_datetime(df_test['Date'])
