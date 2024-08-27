@@ -8,3 +8,10 @@ df_test.head()
 df_train.describe()
 #Summary statistics of the test dataset
 df_test.describe()
+
+#Correlation heatmap for the training dataset
+numeric_df_train = df_train.select_dtypes(include=[np.number])
+plt.figure(figsize=(10, 8))
+sns.heatmap(numeric_df_train.corr(), annot=True, cmap='coolwarm', fmt='.2f')
+plt.title('Correlation Heatmap - Training Dataset')
+plt.show()
