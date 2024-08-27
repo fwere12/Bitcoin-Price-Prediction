@@ -3,3 +3,8 @@ df_train.head()
 
 #Displaying the first few rows of the test dataset
 df_test.head()
+
+#Summary statistics of the training dataset
+df_train.describe()
+#Summary statistics of the test dataset
+df_test.describe()
