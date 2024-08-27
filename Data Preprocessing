@@ -1,3 +1,7 @@
 #Convert 'Date' columns to datetime
 df_train['Date'] = pd.to_datetime(df_train['Date'])
 df_test['Date'] = pd.to_datetime(df_test['Date'])
+
+#Convert 'Volume' and 'Market Cap' columns to numeric, removing commas and handling missing values
+df_train['Volume'] = pd.to_numeric(df_train['Volume'].str.replace(',', ''), errors='coerce')
+df_train['Market Cap'] = pd.to_numeric(df_train['Market Cap'].str.replace(',', ''), errors='coerce')
