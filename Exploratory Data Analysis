@@ -25,3 +25,14 @@ plt.ylabel('Close Price')
 plt.title('Bitcoin Close Price Over Time - Training Dataset')
 plt.legend()
 plt.show()
+
+# Prepare the data for modeling
+X = df_train[['Open', 'High', 'Low', 'Volume', 'Market Cap']]
+y = df_train['Close']
+
+# Handle missing values by filling with the mean
+X = X.fillna(X.mean())
+
+*Predictive Model*
+#Split the data into training and testing sets
+X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
