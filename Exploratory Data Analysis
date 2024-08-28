@@ -15,3 +15,13 @@ plt.figure(figsize=(10, 8))
 sns.heatmap(numeric_df_train.corr(), annot=True, cmap='coolwarm', fmt='.2f')
 plt.title('Correlation Heatmap - Training Dataset')
 plt.show()
+
+*Time Series Analysis*
+#Plotting the closing price over time for the training dataset
+plt.figure(figsize=(14, 7))
+plt.plot(df_train['Date'], df_train['Close'], label='Close Price')
+plt.xlabel('Date')
+plt.ylabel('Close Price')
+plt.title('Bitcoin Close Price Over Time - Training Dataset')
+plt.legend()
+plt.show()
