@@ -49,3 +49,6 @@ mse = mean_squared_error(y_val, y_pred)
 r2 = r2_score(y_val, y_pred)
 print(f'Mean Squared Error: {mse}')
 print(f'R-squared: {r2}')
+
+#Conclusion
+The model's performance is modest and suggests that the MACD and Signal Line alone may not be sufficient for making strong predictions about future price movements in this dataset. Improving the model might require incorporating additional features, more sophisticated models, or further tuning of the existing model.
