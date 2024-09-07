@@ -1,4 +1,5 @@
 #Reading in the datasets
+df = pd.read_csv("BTC-USD(1).csv")
 
 #Convert 'Date' columns to datetime
 df_train['Date'] = pd.to_datetime(df_train['Date'])
